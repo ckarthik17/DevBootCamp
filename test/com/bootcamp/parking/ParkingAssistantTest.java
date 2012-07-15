@@ -3,6 +3,7 @@ package com.bootcamp.parking;
 import com.bootcamp.parking.strategy.LotSelectionStrategy;
 import com.bootcamp.parking.strategy.ParkInLeastFilledLotStrategy;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -190,6 +191,7 @@ public class ParkingAssistantTest {
     }
 
     @Test
+    @Ignore
     public void parkingCoordinatorShouldDelegateTheParkingJobToFirstAvailableAssistant() {
         ParkingAssistant parkingCoordinator = new ParkingAssistant(Arrays.asList(new ParkingLot(2)));
         Car expectedCar = new Car() {};
@@ -205,6 +207,7 @@ public class ParkingAssistantTest {
     }
 
     @Test
+    @Ignore
     public void parkingAssistantShouldNotDelegateTheParkingJobToAssistantsAfterRevokingCoordinatorRole() {
         ParkingLot parkingLot = new ParkingLot(2);
         ParkingAssistant parkingCoordinator = new ParkingAssistant(Arrays.asList(parkingLot));
